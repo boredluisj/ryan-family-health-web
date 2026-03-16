@@ -2,67 +2,70 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Award, GraduationCap } from "lucide-react";
 
 const providers = [
   {
     name: "Michelle Ryan, FNP-C",
     role: "Founder & Lead Nurse Practitioner",
     image: "/images/michelle.webp",
-    bio: "Michelle established Ryan Family Health with a vision of comprehensive, compassionate care. With over two decades of clinical experience, she specializes in advanced primary care, medical weight loss optimization, and holistically treating the entire patient. Her approach blends cutting-edge evidence-based medicine with genuine bedside warmth.",
-    credentials: ["Board Certified Family Nurse Practitioner", "20+ Years Clinical Experience"]
+    bio: "Michelle established Ryan Family Health with a vision of comprehensive, compassionate care. With over two decades of clinical experience, she specializes in advanced primary care and medical weight loss optimization.",
+    credentials: ["Board Certified Family NP", "20+ Years Experience"],
   },
   {
     name: "Brooke McBride, FNP-C",
     role: "Family Nurse Practitioner",
     image: "/images/professional.jpg",
-    bio: "Brooke brings extensive expertise in preventive medicine, women's health, and acute illness management. Dedicated to patient education and empowerment, she works closely with individuals to develop sustainable health strategies that fit their lifestyle and long-term wellness goals.",
-    credentials: ["Board Certified Family Nurse Practitioner", "Specialist in Preventive Care"]
+    bio: "Brooke brings extensive expertise in preventive medicine, women's health, and acute illness management. She works closely with individuals to develop sustainable health strategies.",
+    credentials: ["Board Certified Family NP", "Preventive Care Specialist"],
   },
   {
     name: "Cleo",
-    role: "Chief Morale Officer & Office Dog",
-    image: "/images/dog.jpg", // The very important office dog!
+    role: "Chief Morale Officer",
+    image: "/images/dog.jpg",
     bio: "Cleo works hard every single day to ensure the clinic stays stress-free, welcoming, and full of tail-wagging positivity for every patient who visits.",
-    credentials: ["Expert Cuddler", "Treat Connoisseur"]
-  }
+    credentials: ["Expert Cuddler", "Treat Connoisseur"],
+  },
 ];
 
 export default function Providers() {
   return (
-    <section id="providers" className="py-24 bg-surface">
+    <section id="providers" className="py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="max-w-xl mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex items-center gap-3 mb-4"
+          >
+            <span className="w-12 h-[1px] bg-primary-600 block" />
+            <span className="text-primary-700 text-xs font-bold uppercase tracking-[0.2em]">
+              Meet Our Team
+            </span>
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-primary-600 font-bold tracking-widest uppercase text-sm mb-3"
-          >
-            Meet Our Team
-          </motion.h2>
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-heading font-black text-dark tracking-tight mb-6"
+            className="text-4xl md:text-5xl font-heading font-normal text-dark tracking-[-0.02em] leading-[1.1]"
           >
-            Dedicated Experts Who Care.
-          </motion.h3>
+            Dedicated experts <br className="hidden md:block" />
+            <span className="italic font-light text-primary-700">who genuinely care.</span>
+          </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {providers.map((provider, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col sm:flex-row group"
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              className="group"
             >
-              <div className="w-full sm:w-2/5 aspect-[4/5] sm:aspect-auto relative overflow-hidden">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-6">
                 <Image
                   src={provider.image}
                   alt={provider.name}
@@ -70,24 +73,24 @@ export default function Providers() {
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="w-full sm:w-3/5 p-8 lg:p-10 flex flex-col justify-center">
-                <h4 className="text-2xl font-heading font-bold text-dark mb-1">{provider.name}</h4>
-                <p className="text-primary-600 font-semibold text-sm tracking-wide uppercase mb-6">{provider.role}</p>
-                
-                <p className="text-gray-600 leading-relaxed font-light mb-8">
-                  "{provider.bio}"
-                </p>
-                
-                <div className="space-y-3 mt-auto pt-6 border-t border-gray-100">
-                  <div className="flex items-center gap-2 text-sm text-gray-700 font-medium">
-                    <Award size={16} className="text-primary-500" />
-                    {provider.credentials[0]}
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-700 font-medium">
-                    <GraduationCap size={16} className="text-primary-500" />
-                    {provider.credentials[1]}
-                  </div>
-                </div>
+              <h3 className="text-xl font-heading font-semibold text-dark mb-1">
+                {provider.name}
+              </h3>
+              <p className="text-primary-600 text-sm font-medium mb-4">
+                {provider.role}
+              </p>
+              <p className="text-gray-500 text-[15px] leading-relaxed mb-4">
+                {provider.bio}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {provider.credentials.map((cred, i) => (
+                  <span
+                    key={i}
+                    className="text-xs text-gray-500 border border-gray-200 px-3 py-1 rounded-full"
+                  >
+                    {cred}
+                  </span>
+                ))}
               </div>
             </motion.div>
           ))}

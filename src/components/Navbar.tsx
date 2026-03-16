@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -27,21 +26,21 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-primary-100/50 shadow-sm ${
-        isScrolled ? "py-4" : "py-6"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-gray-100 ${
+        isScrolled ? "py-3 shadow-sm" : "py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center group">
-          <div className="relative w-64 h-12 transition-transform group-hover:scale-105">
-             <Image 
-                src="/images/logo.png" 
-                alt="Ryan Family Health" 
-                fill 
-                className="object-contain object-left"
-                priority
-             />
+          <div className="relative w-56 h-10 transition-transform group-hover:scale-[1.02] duration-300">
+            <Image
+              src="/images/logo.png"
+              alt="Ryan Family Health"
+              fill
+              className="object-contain object-left"
+              priority
+            />
           </div>
         </Link>
 
@@ -53,21 +52,21 @@ export default function Navbar() {
               href={link.href}
               target={link.external ? "_blank" : undefined}
               rel={link.external ? "noopener noreferrer" : undefined}
-              className="text-sm font-semibold text-gray-700 hover:text-primary-600 transition-colors"
+              className="text-[13px] font-semibold text-gray-600 hover:text-primary-700 transition-colors uppercase tracking-wider"
             >
               {link.name}
             </Link>
           ))}
-          <div className="flex items-center gap-4 border-l border-gray-200 pl-8 ml-4">
-            <a href="tel:5188995002" className="flex items-center gap-2 text-sm font-semibold text-dark hover:text-primary-600 transition-colors">
-              <Phone size={16} className="text-primary-500" />
-              <span>(518) 899-5002</span>
+          <div className="flex items-center gap-5 border-l border-gray-200 pl-8 ml-2">
+            <a href="tel:5188995002" className="text-[13px] font-bold text-dark hover:text-primary-700 transition-colors tracking-wide">
+              (518) 899-5002
             </a>
             <Link
               href="#contact"
-              className="bg-primary-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-md shadow-primary-500/20 hover:bg-primary-500 hover:scale-105 transition-all active:scale-95"
+              className="group relative bg-dark text-white px-6 py-2.5 rounded-full text-[13px] font-semibold uppercase tracking-wider overflow-hidden transition-transform hover:-translate-y-0.5 active:scale-95"
             >
-              Book Now
+              <div className="absolute inset-0 bg-primary-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+              <span className="relative z-10">Book Now</span>
             </Link>
           </div>
         </nav>
@@ -76,8 +75,13 @@ export default function Navbar() {
         <button
           className="lg:hidden text-dark p-2"
           onClick={() => setMobileMenuOpen(true)}
+          aria-label="Open menu"
         >
-          <Menu size={24} />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
         </button>
       </div>
 
@@ -102,9 +106,13 @@ export default function Navbar() {
               <div className="p-6 flex justify-end">
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 text-gray-500 hover:text-dark bg-gray-100 rounded-full transition-colors"
+                  className="p-2 text-gray-500 hover:text-dark transition-colors"
+                  aria-label="Close menu"
                 >
-                  <X size={20} />
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
                 </button>
               </div>
               <div className="flex flex-col gap-6 px-8 py-4 flex-grow">
@@ -115,23 +123,20 @@ export default function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
-                    className="text-2xl font-heading font-bold text-dark hover:text-primary-600 transition-colors"
+                    className="text-2xl font-heading font-semibold text-dark hover:text-primary-700 transition-colors"
                   >
                     {link.name}
                   </Link>
                 ))}
               </div>
-              <div className="p-8 border-t border-gray-100 bg-gray-50 flex flex-col gap-4">
-                <a href="tel:5188995002" className="flex items-center gap-3 text-dark font-semibold">
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
-                    <Phone size={20} className="text-primary-600" />
-                  </div>
+              <div className="p-8 border-t border-gray-100 bg-[#faf9f6] flex flex-col gap-4">
+                <a href="tel:5188995002" className="flex items-center gap-3 text-dark font-semibold text-lg">
                   (518) 899-5002
                 </a>
                 <Link
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full bg-primary-600 text-white py-4 rounded-xl text-center font-bold shadow-lg shadow-primary-600/20 active:scale-95 transition-transform"
+                  className="w-full bg-dark text-white py-4 rounded-full text-center font-semibold uppercase tracking-wider text-sm active:scale-95 transition-transform"
                 >
                   Book Consultation
                 </Link>

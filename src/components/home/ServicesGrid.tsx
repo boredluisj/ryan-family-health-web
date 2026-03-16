@@ -1,101 +1,100 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Activity, Scale, Stethoscope, Leaf } from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
-    icon: Activity,
     title: "Primary Care",
     description: "Comprehensive health management, preventive care, and chronic disease treatment for your entire family.",
-    href: "#primary-care",
-    color: "from-blue-500 to-primary-600",
+    href: "#contact",
   },
   {
-    icon: Scale,
     title: "Medical Weight Loss",
     description: "Cutting-edge Semaglutide and Tirzepatide programs clinically proven to safely accelerate your weight loss journey.",
     href: "#weight-loss",
-    color: "from-teal-400 to-primary-500",
   },
   {
-    icon: Stethoscope,
     title: "DOT Physicals",
     description: "Certified medical examinations required for commercial motor vehicle drivers. Walk-ins typically welcome.",
-    href: "#dot-physicals",
-    color: "from-indigo-500 to-blue-600",
+    href: "#contact",
   },
   {
-    icon: Leaf,
     title: "Medical Marijuana",
     description: "Compassionate evaluation and certification for therapeutic cannabis use under state guidelines.",
-    href: "#medical-marijuana",
-    color: "from-emerald-400 to-green-600",
+    href: "#contact",
   },
 ];
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="py-24 bg-surface">
+    <section id="services" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+          <div className="max-w-xl">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-3 mb-4"
+            >
+              <span className="w-12 h-[1px] bg-primary-600 block" />
+              <span className="text-primary-700 text-xs font-bold uppercase tracking-[0.2em]">
+                Our Expertise
+              </span>
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-heading font-normal text-dark tracking-[-0.02em] leading-[1.1]"
+            >
+              Comprehensive healthcare, <br className="hidden md:block" />
+              <span className="italic font-light text-primary-700">tailored to your needs.</span>
+            </motion.h2>
+          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-primary-600 font-bold tracking-widest uppercase text-sm mb-3"
+            transition={{ delay: 0.2 }}
+            className="text-gray-500 max-w-sm text-[15px] leading-relaxed lg:text-right"
           >
-            Our Expertise
-          </motion.h2>
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-heading font-black text-dark tracking-tight mb-6"
-          >
-            Comprehensive Healthcare For Your Needs.
-          </motion.h3>
+            From routine checkups to advanced medical weight loss, we offer a full spectrum of services under one roof.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 overflow-hidden flex flex-col h-full"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200 rounded-2xl overflow-hidden">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`group p-10 lg:p-12 flex flex-col h-full transition-colors duration-300 hover:bg-primary-50/50 ${
+                index < 2 ? "border-b border-gray-200" : ""
+              } ${index % 2 === 0 ? "md:border-r border-gray-200" : ""}`}
+            >
+              <span className="text-primary-500/60 text-xs font-bold tracking-widest font-heading mb-6 block">
+                0{index + 1}
+              </span>
+              <h3 className="text-2xl font-heading font-semibold text-dark mb-4 group-hover:text-primary-700 transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-gray-500 leading-relaxed text-[15px] mb-8 flex-grow">
+                {service.description}
+              </p>
+              <Link
+                href={service.href}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-dark group-hover:text-primary-700 transition-colors"
               >
-                {/* Decorative background gradient that reveals on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-                
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-white shadow-md mb-8 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon size={24} strokeWidth={2.5} />
-                </div>
-                
-                <h4 className="text-xl font-heading font-bold text-dark mb-4 group-hover:text-primary-600 transition-colors">
-                  {service.title}
-                </h4>
-                
-                <p className="text-gray-600 font-light leading-relaxed mb-8 flex-grow">
-                  {service.description}
-                </p>
-                
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center gap-2 text-sm font-bold text-dark group-hover:text-primary-600 transition-colors mt-auto"
-                >
-                  Learn more
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </motion.div>
-            );
-          })}
+                Learn more
+                <span className="group-hover:translate-x-1 transition-transform inline-block">&rarr;</span>
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
