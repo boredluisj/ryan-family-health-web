@@ -22,7 +22,7 @@ export default function Navbar() {
     { name: "Services", href: "#services" },
     { name: "Weight Loss", href: "#weight-loss" },
     { name: "Providers", href: "#providers" },
-    { name: "Patient Portal", href: "https://auth.athenahealth.com/login" },
+    { name: "Patient Portal", href: "https://www.medentmobile.com/portal/index.php?practice_id=QM65v37Z", external: true },
   ];
 
   return (
@@ -53,6 +53,8 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
               className="text-sm font-semibold text-gray-700 hover:text-primary-600 transition-colors"
             >
               {link.name}
@@ -113,6 +115,8 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
                     className="text-2xl font-heading font-bold text-dark hover:text-primary-600 transition-colors"
                   >
                     {link.name}

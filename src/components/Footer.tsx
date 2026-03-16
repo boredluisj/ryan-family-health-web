@@ -31,8 +31,9 @@ export default function Footer() {
               <li><Link href="#services" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">Primary Care Services</Link></li>
               <li><Link href="#weight-loss" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">Medical Weight Loss</Link></li>
               <li><Link href="#providers" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">Our Providers</Link></li>
-              <li><Link href="https://auth.athenahealth.com/login" className="text-primary-400 hover:text-primary-300 text-sm font-semibold transition-colors">Patient Portal Login</Link></li>
-              <li><a href="#" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">Patient Forms & Policies</a></li>
+              <li><a href="https://www.medentmobile.com/portal/index.php?practice_id=QM65v37Z" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 text-sm font-semibold transition-colors">Patient Portal Login</a></li>
+              <li><a href="https://www.medent.com/tutorials_mp4/Patient_Portal_Patient_Promo.mp4" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">Patient Portal Tutorial</a></li>
+              <li><Link href="#" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">Patient Forms & Policies</Link></li>
             </ul>
           </div>
 
