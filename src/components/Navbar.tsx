@@ -47,7 +47,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
               href={link.href}
               target={link.external ? "_blank" : undefined}
@@ -55,19 +55,19 @@ export default function Navbar() {
               className="text-[13px] font-semibold text-gray-600 hover:text-primary-700 transition-colors uppercase tracking-wider"
             >
               {link.name}
-            </Link>
+            </a>
           ))}
           <div className="flex items-center gap-5 border-l border-gray-200 pl-8 ml-2">
             <a href="tel:5188995002" className="text-[13px] font-bold text-dark hover:text-primary-700 transition-colors tracking-wide">
               (518) 899-5002
             </a>
-            <Link
+            <a
               href="#contact"
               className="group relative bg-dark text-white px-6 py-2.5 rounded-full text-[13px] font-semibold uppercase tracking-wider overflow-hidden transition-transform hover:-translate-y-0.5 active:scale-95"
             >
               <div className="absolute inset-0 bg-primary-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               <span className="relative z-10">Book Now</span>
-            </Link>
+            </a>
           </div>
         </nav>
 
@@ -117,7 +117,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col gap-6 px-8 py-4 flex-grow">
                 {navLinks.map((link) => (
-                  <Link
+                  <a
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
@@ -126,20 +126,20 @@ export default function Navbar() {
                     className="text-2xl font-heading font-semibold text-dark hover:text-primary-700 transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 ))}
               </div>
               <div className="p-8 border-t border-gray-100 bg-[#faf9f6] flex flex-col gap-4">
                 <a href="tel:5188995002" className="flex items-center gap-3 text-dark font-semibold text-lg">
                   (518) 899-5002
                 </a>
-                <Link
+                <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full bg-dark text-white py-4 rounded-full text-center font-semibold uppercase tracking-wider text-sm active:scale-95 transition-transform"
                 >
                   Book Consultation
-                </Link>
+                </a>
               </div>
             </motion.div>
           </>

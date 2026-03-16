@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export default function RootLayout({
   children,
@@ -30,9 +31,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} antialiased bg-surface text-dark font-sans selection:bg-primary-500/30`}
       >
-        <Navbar />
-        <main className="min-h-screen pt-24">{children}</main>
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          <main className="min-h-screen pt-24">{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

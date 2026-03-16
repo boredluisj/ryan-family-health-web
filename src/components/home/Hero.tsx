@@ -54,7 +54,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
               className="flex flex-col sm:flex-row items-center gap-6"
             >
-              <Link
+              <a
                 href="#contact"
                 className="group relative flex items-center justify-center gap-3 bg-dark text-white px-9 py-4 rounded-full text-sm font-semibold uppercase tracking-widest overflow-hidden transition-transform hover:-translate-y-1 active:scale-95"
               >
@@ -63,7 +63,7 @@ export default function Hero() {
                   <Calendar size={18} />
                   Book Consultation
                 </span>
-              </Link>
+              </a>
               
               <a
                 href="tel:5188995002"

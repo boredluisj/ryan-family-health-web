@@ -58,13 +58,13 @@ export default function InteriorCTA() {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          <Link
+          <a
             href="#contact"
             className="group relative inline-flex items-center justify-center bg-white text-dark px-9 py-4 rounded-full text-sm font-semibold uppercase tracking-widest overflow-hidden transition-transform hover:-translate-y-1 active:scale-95"
           >
             <div className="absolute inset-0 bg-primary-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
             <span className="relative z-10 group-hover:text-white transition-colors duration-300">Become a Patient Today</span>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

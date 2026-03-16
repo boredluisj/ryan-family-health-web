@@ -78,13 +78,13 @@ export default function WeightLossHighlight() {
               ))}
             </ul>
 
-            <Link
+            <a
               href="#contact"
               className="group relative flex items-center justify-center gap-3 bg-dark text-white px-9 py-4 rounded-full text-sm font-semibold uppercase tracking-widest overflow-hidden transition-transform hover:-translate-y-1 active:scale-95 w-fit"
             >
               <div className="absolute inset-0 bg-primary-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               <span className="relative z-10">Schedule Consultation</span>
-            </Link>
+            </a>
           </motion.div>
         </div>
       </div>

@@ -71,9 +71,9 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Ryan Family Health. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-xs text-gray-500">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
-            <Link href="#" className="hover:text-white transition-colors">HIPAA Notice</Link>
+            <a href="https://drive.google.com/file/d/1PCK3PgXc8c7Co_m19rC35IZGvw8uJXn5/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="https://drive.google.com/file/d/1PCK3PgXc8c7Co_m19rC35IZGvw8uJXn5/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="https://drive.google.com/file/d/1WU6HGrwDrtx04RIhaGL39ks2txM0sqLY/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">HIPAA Notice</a>
           </div>
         </div>
       </div>
