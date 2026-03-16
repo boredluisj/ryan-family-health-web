@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://static.wixstatic.com/media/84770f_187545528ee77fac3cf55d102da8c89e.jpg/v1/fill/w_1920,h_1080,al_c,q_85,enc_avif,quality_auto/84770f_187545528ee77fac3cf55d102da8c89e.jpg"
+          src="/images/exterior.jpg"
           alt="Ryan Family Health Clinic Exterior"
           fill
           className="object-cover"

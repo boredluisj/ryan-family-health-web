@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, HeartPulse } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,13 +35,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center text-white shadow-md group-hover:bg-primary-500 transition-colors">
-            <HeartPulse size={24} />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-heading font-black text-xl text-dark leading-none tracking-tight">Ryan Family Health</span>
-            <span className="text-primary-600 text-xs font-semibold tracking-widest uppercase mt-1">Medical Clinic</span>
+        <Link href="/" className="flex items-center group">
+          <div className="relative w-64 h-12 transition-transform group-hover:scale-105">
+             <Image 
+                src="/images/logo.png" 
+                alt="Ryan Family Health" 
+                fill 
+                className="object-contain object-left"
+                priority
+             />
           </div>
         </Link>
 

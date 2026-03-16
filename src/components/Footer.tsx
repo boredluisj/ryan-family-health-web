@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { HeartPulse, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,13 +9,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-6 group">
-              <div className="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center text-white shadow-md">
-                <HeartPulse size={24} />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-black text-xl text-white leading-none tracking-tight">Ryan Family Health</span>
-                <span className="text-primary-400 text-xs font-semibold tracking-widest uppercase mt-1">Medical Clinic</span>
+            <Link href="/" className="flex items-center mb-6 group bg-white/95 p-3 rounded-xl inline-block w-fit">
+              <div className="relative w-56 h-10 transition-transform group-hover:scale-105">
+                 <Image 
+                    src="/images/logo.png" 
+                    alt="Ryan Family Health" 
+                    fill 
+                    className="object-contain object-left"
+                 />
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">

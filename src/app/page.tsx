@@ -3,6 +3,7 @@ import ValueProps from "@/components/home/ValueProps";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import WeightLossHighlight from "@/components/home/WeightLossHighlight";
 import Providers from "@/components/home/Providers";
+import InteriorCTA from "@/components/home/InteriorCTA";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ServicesGrid />
       <WeightLossHighlight />
       <Providers />
+      <InteriorCTA />
     </>
   );
 }

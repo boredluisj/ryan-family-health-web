@@ -8,16 +8,30 @@ const providers = [
   {
     name: "Michelle Ryan, FNP-C",
     role: "Founder & Lead Nurse Practitioner",
-    image: "https://static.wixstatic.com/media/f43aa2_051bfe8eba3342ceb7f0cafe1417e62b~mv2.jpg/v1/fill/w_452,h_602,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f43aa2_051bfe8eba3342ceb7f0cafe1417e62b~mv2.jpg",
+    image: "/images/michelle.webp",
     bio: "Michelle established Ryan Family Health with a vision of comprehensive, compassionate care. With over two decades of clinical experience, she specializes in advanced primary care, medical weight loss optimization, and holistically treating the entire patient. Her approach blends cutting-edge evidence-based medicine with genuine bedside warmth.",
     credentials: ["Board Certified Family Nurse Practitioner", "20+ Years Clinical Experience"]
   },
   {
     name: "Brooke McBride, FNP-C",
     role: "Family Nurse Practitioner",
-    image: "https://static.wixstatic.com/media/f43aa2_d61c288cefa44ce2ba31973c0f0c9b5a~mv2.jpg/v1/fill/w_460,h_340,al_c,lg_1,q_80,enc_avif,quality_auto/f43aa2_d61c288cefa44ce2ba31973c0f0c9b5a~mv2.jpg", // Adjusted to original Brooke image from brief
+    image: "/images/brooke.jpg",
     bio: "Brooke brings extensive expertise in preventive medicine, women's health, and acute illness management. Dedicated to patient education and empowerment, she works closely with individuals to develop sustainable health strategies that fit their lifestyle and long-term wellness goals.",
     credentials: ["Board Certified Family Nurse Practitioner", "Specialist in Preventive Care"]
+  },
+  {
+    name: "Our Dedicated Staff",
+    role: "Professional Medical Team",
+    image: "/images/professional.jpg",
+    bio: "From the moment you walk through our doors, our entire team is committed to providing a seamless, welcoming, and high-quality patient experience.",
+    credentials: ["Certified Medical Assistants", "Patient Success Advocates"]
+  },
+  {
+    name: "Cleo",
+    role: "Chief Morale Officer & Office Dog",
+    image: "/images/dog.jpg", // The very important office dog!
+    bio: "Cleo works hard every single day to ensure the clinic stays stress-free, welcoming, and full of tail-wagging positivity for every patient who visits.",
+    credentials: ["Expert Cuddler", "Treat Connoisseur"]
   }
 ];
 
