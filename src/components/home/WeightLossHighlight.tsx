@@ -32,17 +32,6 @@ export default function WeightLossHighlight() {
                 className="object-cover"
               />
             </div>
-            {/* Floating stat */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute -bottom-6 -right-6 md:bottom-8 md:-right-8 bg-dark text-white p-6 rounded-2xl shadow-xl max-w-[200px]"
-            >
-              <span className="text-4xl font-heading font-bold block leading-none text-primary-400">Rx</span>
-              <p className="text-sm text-white/70 mt-2 font-light">Prescription-grade GLP-1 weight loss</p>
-            </motion.div>
           </motion.div>
 
           {/* Text Content */}

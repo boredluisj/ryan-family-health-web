@@ -34,8 +34,8 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               className="text-5xl md:text-6xl lg:text-7xl font-heading font-normal text-dark leading-[1.05] mb-8 tracking-[-0.02em]"
             >
-              Modern care <br className="hidden md:block" />
-              <span className="font-light italic text-primary-700">for your entire</span> <br className="hidden md:block" />
+              Bespoke medicine. <br className="hidden md:block" />
+              <span className="font-light italic text-primary-700">Tailored for your</span> <br className="hidden md:block" />
               family.
             </motion.h1>
 
@@ -45,7 +45,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="text-lg md:text-xl text-gray-600 mb-12 leading-relaxed max-w-xl font-light"
             >
-              Since 1987, Ryan Family Health has provided unparalleled primary care, advanced medical weight loss, and dedicated holistic wellness in a state-of-the-art facility.
+              For over three decades, Ryan Family Health has delivered uncompromised primary care and elite medical weight loss protocols in a private, state-of-the-art facility.
             </motion.p>
 
             <motion.div
@@ -97,27 +97,7 @@ export default function Hero() {
               />
             </motion.div>
 
-            {/* Floating Decorative Element */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-              className="absolute -bottom-8 -left-8 md:bottom-12 md:-left-12 bg-white p-6 rounded-3xl shadow-xl shadow-gray-200/50 max-w-[240px] border border-gray-50"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-primary-100 border-2 border-white flex items-center justify-center text-primary-600 font-bold text-xs">
-                      ★
-                    </div>
-                  ))}
-                </div>
-                <span className="text-sm font-bold font-heading text-dark">5.0 Rating</span>
-              </div>
-              <p className="text-xs text-gray-500 leading-relaxed font-light">
-                Trusted by hundreds of families across Ballston Spa for premium medical care.
-              </p>
-            </motion.div>
+
           </div>
 
         </div>

@@ -3,7 +3,7 @@
 @theme {
   --font-sans: "Inter", var(--font-inter);
   --font-mono: var(--font-geist-mono);
-  --font-heading: "Outfit", var(--font-outfit);
+  --font-heading: "Playfair Display", var(--font-playfair);
 
   /* Bespoke warm medical palette — not generic teal/purple */
   --color-primary-50: #f0f7f4;

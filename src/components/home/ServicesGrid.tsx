@@ -50,8 +50,8 @@ export default function ServicesGrid() {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl font-heading font-normal text-dark tracking-[-0.02em] leading-[1.1]"
             >
-              Comprehensive healthcare, <br className="hidden md:block" />
-              <span className="italic font-light text-primary-700">tailored to your needs.</span>
+              Elite protocols, <br className="hidden md:block" />
+              <span className="italic font-light text-primary-700">proven outcomes.</span>
             </motion.h2>
           </div>
           <motion.p
@@ -61,11 +61,11 @@ export default function ServicesGrid() {
             transition={{ delay: 0.2 }}
             className="text-gray-500 max-w-sm text-[15px] leading-relaxed lg:text-right"
           >
-            From routine checkups to advanced medical weight loss, we offer a full spectrum of services under one roof.
+            We deploy advanced longevity medicine alongside comprehensive family care to maximize your healthspan.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200 rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200 overflow-hidden">
           {services.map((service, index) => (
             <motion.div
               key={index}

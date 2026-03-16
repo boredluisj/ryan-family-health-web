@@ -65,12 +65,12 @@ export default function Providers() {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="group"
             >
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-6">
+              <div className="relative aspect-[3/4] overflow-hidden mb-6 border border-gray-100">
                 <Image
                   src={provider.image}
                   alt={provider.name}
                   fill
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
                 />
               </div>
               <h3 className="text-xl font-heading font-semibold text-dark mb-1">
