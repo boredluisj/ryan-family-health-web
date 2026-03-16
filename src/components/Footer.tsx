@@ -43,15 +43,15 @@ export default function Footer() {
             <ul className="flex flex-col gap-4">
               <li className="flex gap-3 text-sm text-gray-400">
                 <MapPin size={18} className="text-primary-500 shrink-0 mt-0.5" />
-                <span>123 Medical Plaza Drive<br />Suite 100<br />City, ST 12345</span>
+                <span>2554 Route 9<br />Ballston Spa, NY 12020</span>
               </li>
               <li className="flex gap-3 text-sm text-gray-400">
                 <Phone size={18} className="text-primary-500 shrink-0" />
-                <a href="tel:5551234567" className="hover:text-primary-400 transition-colors">(555) 123-4567</a>
+                <a href="tel:5188995002" className="hover:text-primary-400 transition-colors">(518) 899-5002</a>
               </li>
               <li className="flex gap-3 text-sm text-gray-400">
                 <Mail size={18} className="text-primary-500 shrink-0" />
-                <a href="mailto:info@ryanfamilyhealth.com" className="hover:text-primary-400 transition-colors">info@ryanfamilyhealth.com</a>
+                <a href="mailto:michelle@ryanfamilyhealth.com" className="hover:text-primary-400 transition-colors">michelle@ryanfamilyhealth.com</a>
               </li>
             </ul>
           </div>

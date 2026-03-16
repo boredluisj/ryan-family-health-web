@@ -27,10 +27,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/80 backdrop-blur-lg border-b border-primary-100 shadow-sm py-4"
-          : "bg-transparent py-6"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-primary-100/50 shadow-sm ${
+        isScrolled ? "py-4" : "py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -61,9 +59,9 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="flex items-center gap-4 border-l border-gray-200 pl-8 ml-4">
-            <a href="tel:1234567890" className="flex items-center gap-2 text-sm font-semibold text-dark hover:text-primary-600 transition-colors">
+            <a href="tel:5188995002" className="flex items-center gap-2 text-sm font-semibold text-dark hover:text-primary-600 transition-colors">
               <Phone size={16} className="text-primary-500" />
-              <span>(555) 123-4567</span>
+              <span>(518) 899-5002</span>
             </a>
             <Link
               href="#contact"
@@ -124,11 +122,11 @@ export default function Navbar() {
                 ))}
               </div>
               <div className="p-8 border-t border-gray-100 bg-gray-50 flex flex-col gap-4">
-                <a href="tel:1234567890" className="flex items-center gap-3 text-dark font-semibold">
+                <a href="tel:5188995002" className="flex items-center gap-3 text-dark font-semibold">
                   <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
                     <Phone size={20} className="text-primary-600" />
                   </div>
-                  (555) 123-4567
+                  (518) 899-5002
                 </a>
                 <Link
                   href="#contact"
