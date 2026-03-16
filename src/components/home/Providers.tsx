@@ -15,16 +15,9 @@ const providers = [
   {
     name: "Brooke McBride, FNP-C",
     role: "Family Nurse Practitioner",
-    image: "/images/brooke.jpg",
+    image: "/images/professional.jpg",
     bio: "Brooke brings extensive expertise in preventive medicine, women's health, and acute illness management. Dedicated to patient education and empowerment, she works closely with individuals to develop sustainable health strategies that fit their lifestyle and long-term wellness goals.",
     credentials: ["Board Certified Family Nurse Practitioner", "Specialist in Preventive Care"]
-  },
-  {
-    name: "Our Dedicated Staff",
-    role: "Professional Medical Team",
-    image: "/images/professional.jpg",
-    bio: "From the moment you walk through our doors, our entire team is committed to providing a seamless, welcoming, and high-quality patient experience.",
-    credentials: ["Certified Medical Assistants", "Patient Success Advocates"]
   },
   {
     name: "Cleo",

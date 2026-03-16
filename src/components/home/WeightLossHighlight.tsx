@@ -27,8 +27,8 @@ export default function WeightLossHighlight() {
           >
             <div className="relative rounded-[2rem] overflow-hidden aspect-[4/5] shadow-2xl">
               <Image
-                src="/images/pills.jpg"
-                alt="Medical weight loss treatments including GLP-1 medications"
+                src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=2670&auto=format&fit=crop"
+                alt="Healthy active lifestyle resulting from medical weight loss"
                 fill
                 className="object-cover"
               />

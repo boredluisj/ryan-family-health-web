@@ -11,15 +11,15 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/exterior.jpg"
-          alt="Ryan Family Health Clinic Exterior"
+          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2668&auto=format&fit=crop"
+          alt="Luxury Medical Clinic Interior"
           fill
           className="object-cover"
           priority
         />
-        {/* Advanced gradient overlay for premium feel */}
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/80 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark/50 to-transparent z-10" />
+        {/* Lighter, elegant gradient overlay designed to let the spectacular photography pop */}
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/50 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-dark/30 to-transparent z-10" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-20 w-full">
